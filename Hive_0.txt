@@ -1,0 +1,63 @@
+Hive:
+28 jan 2023 Saturday
+
+https://github.com/shashank-ineuron/Hive
+https://github.com/vishalsingh17/HiveHadoopDockerComposeSetup
+
+------------------------------------------------------------------------------------------------------
+29 jan 2023 sunday
+
+neurolab
+
+show databases;
+
+hadoop fs -ls /user/hive
+displays warehouse location -> /user/hive/warehouse : used by hive to store data in hdfs at this path
+
+hadoop fs -put depart_data.csv /tmp  (copies the file from local to tmp folder)
+
+
+hive> set hive.cli.print.header=true;
+hive> select * from depart_data;;
+
+hive> describe formatted depart_data; 
+(if table type is shown MANAGED_TABLE then it is an internal table)
+
+
+hadoop fs -mkdir /input_data/
+hadoop fs -put depart_data.csv /input_data (copies the file from local to input_data folder)
+hadoop fs -ls /input_data
+
+hive> select * from depart_data_external;;
+
+------------------------------------------------------------------------------------------------------
+04 feb 2023 saturday
+
+https://github.com/vishalsingh17/HiveDockerSetup  
+once the setup is done and all containers are running follow below steps to start hive:
+docker exec -it containerid(of hive server) /bin/bash
+hive
+hive> (hive shell gets started)
+
+in hadoop terminal
+pwd - to know present directory
+
+
+
+https://cwiki.apache.org/confluence/display/hive/csv+serde#:~:text=The%20CSV%20SerDe%20is%20based,Hive%20distribution%20in%20HIVE%2D7777.&text=This%20SerDe%20treats%20all%20columns,would%20show%20string%20column%20type.
+
+https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManualDDL-RowFormats&SerDe
+
+
+describe formatted csv_table; 
+describe formatted json_table; 
+
+
+
+
+
+
+
+
+
+
