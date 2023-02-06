@@ -52,6 +52,15 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManu
 describe formatted csv_table; 
 describe formatted json_table; 
 
+------------------------------------------------------------------------------------------------------
+05 feb 2023 sunday
+
+check tables and its data at below warehouse path:
+hadoop fs -ls /user/hive/warehouse/hive_db.db/sales_data_pq_final (shows parquet file 000000_0)
+hadoop fs -cat /user/hive/warehouse/hive_db.db/sales_data_pq_final/000000_0 (data is stored in compressed format - bytes)
+to see/check data use the parquet table (sales_data_pq_final)
+
+
 
 
 
