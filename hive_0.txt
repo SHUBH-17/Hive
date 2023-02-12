@@ -60,6 +60,15 @@ hadoop fs -ls /user/hive/warehouse/hive_db.db/sales_data_pq_final (shows parquet
 hadoop fs -cat /user/hive/warehouse/hive_db.db/sales_data_pq_final/000000_0 (data is stored in compressed format - bytes)
 to see/check data use the parquet table (sales_data_pq_final)
 
+------------------------------------------------------------------------------------------------------
+11 feb 2023 sunday
+
+describe formatted buck_users;
+
+hadoop fs -ls /user/hive/warehouse/hive_db.db/buck_users (buckets/parts of the entire data)
+
+hadoop> vim multiply_udf.py -(displays the python code)
+hadoop> python multiply_udf.py -(runs the python code)
 
 
 
